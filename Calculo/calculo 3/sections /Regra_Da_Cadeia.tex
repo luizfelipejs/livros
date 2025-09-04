@@ -1,0 +1,66 @@
+\subsection{Regra Da Cadeia e Derivação implícita}
+
+\begin{theorem}
+	Supondo que $z = f(x, y)$ seja uma função diferenciável, onde $x = g(t)$ e $y = h(t)$ são funções diferenciáveis de $t$, então $z$ é uma função diferenciável de $t$, e segue que
+	
+	\[
+	\dfrac{dz}{dt} = \dfrac{\partial f}{\partial x} \dfrac{dx}{dt} + \dfrac{\partial f}{\partial y} \dfrac{dy}{dt}
+	\]
+\end{theorem}
+
+\begin{proof}
+	Seja $z = f(x, y)$ uma função diferenciável, com $x = g(t)$ e $y = h(t)$ funções diferenciáveis de $t$. Então, ao variar $t$ em uma pequena quantidade $\Delta t$, temos variações $\Delta x$ em $x$ e $\Delta y$ em $y$, que por sua vez causam uma variação $\Delta z$ em $z$.
+	
+	Como $f$ é diferenciável, temos que a variação $\Delta z$ pode ser aproximada por:
+	
+	\[
+	\Delta z \approx \frac{\partial f}{\partial x} \Delta x + \frac{\partial f}{\partial y} \Delta y
+	\]
+	
+	Dividindo ambos os lados por $\Delta t$, obtemos:
+	
+	\[
+	\frac{\Delta z}{\Delta t} \approx \frac{\partial f}{\partial x} \frac{\Delta x}{\Delta t} + \frac{\partial f}{\partial y} \frac{\Delta y}{\Delta t}
+	\]
+	
+	Tomando o limite quando $\Delta t \to 0$, e usando a continuidade e a diferenciabilidade de $x(t)$ e $y(t)$, obtemos:
+	
+	\[
+	\frac{dz}{dt} = \frac{\partial f}{\partial x} \frac{dx}{dt} + \frac{\partial f}{\partial y} \frac{dy}{dt}
+	\]
+	
+	Portanto, a derivada de $z$ em relação a $t$ é dada pela fórmula da Regra da Cadeia.
+\end{proof}
+
+\begin{definition}[Regra da Cadeia — Caso 2]
+	Suponha que $z = f(x, y)$ seja uma função diferenciável de $x$ e $y$, onde $x = g(s, t)$ e $y = h(s, t)$ são funções diferenciáveis de $s$ e $t$.
+	
+	Então, $z$ é uma função diferenciável de $s$ e $t$, e temos:
+	
+	\[
+	\frac{\partial z}{\partial s} = \frac{\partial f}{\partial x} \frac{\partial x}{\partial s} + \frac{\partial f}{\partial y} \frac{\partial y}{\partial s}
+	\quad \text{e} \quad
+	\frac{\partial z}{\partial t} = \frac{\partial f}{\partial x} \frac{\partial x}{\partial t} + \frac{\partial f}{\partial y} \frac{\partial y}{\partial t}
+	\]
+\end{definition}
+
+\begin{theorem}
+	Suponha que $u$ seja uma função diferenciável de $n$ variáveis $x_1, x_2, \dots, x_n$, onde cada $x_j$ é uma função diferenciável de $m$ variáveis $t_1, t_2, \dots, t_m$. Então $u$ é uma função diferenciável de $t_1, t_2, \dots, t_m$ e, para cada $i = 1, 2, \dots, m$, temos:
+	
+	\[
+	\frac{\partial u}{\partial t_i} 
+	= 
+	\frac{\partial u}{\partial x_1} \frac{\partial x_1}{\partial t_i}
+	+ \frac{\partial u}{\partial x_2} \frac{\partial x_2}{\partial t_i}
+	+ \dots 
+	+ \frac{\partial u}{\partial x_n} \frac{\partial x_n}{\partial t_i}
+	\]
+	
+	ou, de forma compacta:
+	
+	\[
+	\frac{\partial u}{\partial t_i} 
+	= 
+	\sum_{j=1}^{n} \frac{\partial u}{\partial x_j} \frac{\partial x_j}{\partial t_i}
+	\]
+\end{theorem}

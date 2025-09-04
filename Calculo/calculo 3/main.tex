@@ -1,0 +1,72 @@
+\documentclass[11pt,a4paper]{article}
+
+% Pacotes básicos
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb, amsfonts, amsthm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{amsmath}
+\usetikzlibrary{3d, calc}
+
+% Layout da página
+\geometry{margin=2.5cm}
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0em}
+
+% Cabeçalho e rodapé
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Cálculo 3}
+\rfoot{\thepage}
+
+% Comandos úteis
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\vect}[1]{\vec{\mathbf{#1}}}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+
+\theoremstyle{definition} % Estilo para todos (fonte romana, não itálico)
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{lemma}{Lema}[section]
+\newtheorem{definition}{Definição}[section]
+\newtheorem{example}{Exemplo}[section]
+\newtheorem{remark}{Observação}[section]
+\newtheorem{proposition}{Proposição}[section] % Define um ambiente "proposition"
+\newenvironment{demonstracao}[1][Demonstração]{\par\noindent\textbf{#1:} }
+
+
+
+
+\begin{document}
+
+% ----- CAPA -----
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    {\Huge\bfseries Anotações de Cálculo 3 \par}
+    \vspace{1.5cm}
+    {\Large Luiz Felipe\par}
+    \vfill
+    {\large \today\par}
+\end{titlepage}
+
+% ----- SUMÁRIO -----
+\tableofcontents
+\newpage
+
+% ----- CONTEÚDO -----
+\section{Derivadas Parciais}
+\input{sections /derivadas_parciais.tex}
+\input{sections /Planos Tangentes e Aproximações Lineares.tex}
+\input{sections /Regra_Da_Cadeia.tex}
+\end{document}
